@@ -14,9 +14,10 @@ This is a full-stack web application built with React and Node.js. The app allow
 1. **Clone the repository**  
    Open your terminal and run the following command to clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/me-harshil/Form-Submission-with-Google-Sheet-Sync.git
 
 2. **Install Dependencies: Install the required dependencies for the Frontend and Backend**
+- Navigate to the project directory and run following command:
    ```bash
    npm install
    cd Backend
@@ -35,17 +36,26 @@ This is a full-stack web application built with React and Node.js. The app allow
    );
 
 4. **Set Up Environment Variables**
-- Create a .env file in the root of your backend directory with the database credentials, spreadsheet  ID, and Google credentials path.
+- Create a .env file in the root of your backend directory with the database credentials and spreadsheet  ID.
     ```bash
    SPREADSHEET_ID=
    DB_PASSWORD=
    DB_HOST=
    DB_USER=
 
-5. **Start Backend: Start the backend server**
+5. **Google Sheets Setup**
+- Go to Google Cloud Console.
+- Enable the Google Sheets API.
+- Create credentials (service account) and download the credentials.json file.
+- Place the credentials.json file in a backend directory.
+- Share the Google Sheet with your service account email.
+- Replace the SPREADSHEET_ID in your .env file with the actual ID of the Google Sheet.
+- Replace googleSheetUrl variable from src/App.jsx. I give my google sheet [link](https://docs.google.com/spreadsheets/d/1rBSf6_vJgDWrB9_t6bJbrqbFAzdlDTN-L8RPfIJ_H7w/edit?usp=sharing)
+
+6. **Start Backend: Start the backend server**
    ```bash
    node server.js
 
-6. **Navigate to Root Directory and run start react server**
+7. **Navigate to Root Directory and run start react server**
    ```bash
    npm run dev
